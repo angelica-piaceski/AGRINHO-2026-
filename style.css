@@ -1,173 +1,437 @@
 
-/* ========================= */
-/* IMAGENS */
-/* ========================= */
+/* ===========================
+   RESET
+=========================== */
 
-.hero-img {
-    display: block;
-    width: 100%;
-    max-width: 850px;
-    margin: 35px auto 0;
-    border-radius: 18px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-    transition: transform .4s ease;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-.hero-img:hover {
-    transform: scale(1.02);
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f9f3;
+    color:#333;
+    line-height:1.7;
 }
 
-.secao-img {
-    display: block;
-    width: 100%;
-    max-width: 700px;
-    margin: 30px auto;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    transition: transform .4s ease;
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(27,94,32,.95);
+    backdrop-filter:blur(8px);
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
 }
 
-.secao-img:hover {
-    transform: scale(1.03);
+.navbar{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
 }
 
-/* ========================= */
-/* HERO */
-/* ========================= */
-
-.hero {
-    text-align: center;
-    padding: 80px 20px;
+.logo{
+    color:#fff;
+    font-size:1.8rem;
+    font-weight:700;
 }
 
-.hero h2 {
-    font-size: 3rem;
-    color: #1b5e20;
-    margin-bottom: 15px;
+.menu{
+    display:flex;
+    list-style:none;
+    gap:28px;
 }
 
-.hero p {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    font-size: 1.1rem;
-    line-height: 1.7;
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
 }
 
-/* ========================= */
-/* TÍTULOS */
-/* ========================= */
-
-.card h2 {
-    text-align: center;
-    color: #2e7d32;
-    margin-bottom: 20px;
-    font-size: 2rem;
+.menu a:hover{
+    color:#a5d6a7;
 }
 
-/* ========================= */
-/* PARÁGRAFOS */
-/* ========================= */
+/* ===========================
+   HERO
+=========================== */
 
-.card p {
-    text-align: justify;
-    line-height: 1.8;
-    font-size: 1.05rem;
+.hero{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding-top:120px;
 }
 
-/* ========================= */
-/* LISTA */
-/* ========================= */
-
-#desafios ul {
-    max-width: 700px;
-    margin: auto;
-    line-height: 2;
-    padding-left: 20px;
+.tag{
+    display:inline-block;
+    background:#c8e6c9;
+    color:#1b5e20;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:.9rem;
+    margin-bottom:20px;
+    font-weight:600;
 }
 
-#desafios li {
-    margin-bottom: 8px;
+.hero h2{
+    font-size:3.4rem;
+    color:#1b5e20;
+    margin-bottom:20px;
+    line-height:1.2;
 }
 
-/* ========================= */
-/* FORMULÁRIO */
-/* ========================= */
+.hero h2 span{
+    color:#43a047;
+}
 
-form {
-    max-width: 650px;
-    margin: auto;
+.hero p{
+    font-size:1.1rem;
+    margin-bottom:35px;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    background:#2e7d32;
+    color:#fff;
+    padding:15px 34px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    background:#43a047;
+    box-shadow:0 10px 25px rgba(46,125,50,.3);
+}
+
+/* ===========================
+   IMAGEM PRINCIPAL
+=========================== */
+
+.hero-image img{
+    width:100%;
+    border-radius:22px;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+    transition:.4s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.02);
+}
+
+/* ===========================
+   SEÇÕES
+=========================== */
+
+.section{
+    width:90%;
+    max-width:1200px;
+    margin:90px auto;
+}
+
+.section h2{
+    text-align:center;
+    color:#1b5e20;
+    font-size:2.4rem;
+    margin-bottom:25px;
+}
+
+.texto{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#555;
+    font-size:1.05rem;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-top:45px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.card h3{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#666;
+}
+
+/* ===========================
+   SUSTENTABILIDADE
+=========================== */
+
+.destaque{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.imagem img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.imagem img:hover{
+    transform:scale(1.03);
+}
+
+.conteudo p{
+    color:#555;
+    margin:20px 0 30px;
+    font-size:1.05rem;
+}
+
+.lista{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.lista span{
+    background:#e8f5e9;
+    padding:15px;
+    border-radius:12px;
+    font-weight:600;
+    color:#2e7d32;
+    transition:.3s;
+}
+
+.lista span:hover{
+    background:#c8e6c9;
+    transform:translateY(-5px);
+}
+
+/* ===========================
+   FORMULÁRIO
+=========================== */
+
+.contato{
+    text-align:center;
+}
+
+form{
+    max-width:700px;
+    margin:40px auto;
 }
 
 input,
-textarea {
-    font-size: 1rem;
+textarea{
+    width:100%;
+    padding:16px;
+    margin-bottom:18px;
+    border:none;
+    border-radius:12px;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    font-family:'Poppins',sans-serif;
+    font-size:1rem;
 }
 
-textarea {
-    min-height: 140px;
-    resize: vertical;
+textarea{
+    min-height:170px;
+    resize:vertical;
 }
 
-/* ========================= */
-/* RESPONSIVIDADE */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero h2 {
-        font-size: 2.2rem;
-    }
-
-    .card {
-        padding: 25px;
-    }
-
-    section {
-        padding: 60px 6%;
-    }
-
-/* Link ativo do menu */
-nav ul li a.active {
-    color: #81c784;
-    border-bottom: 2px solid #81c784;
+button{
+    background:#2e7d32;
+    color:#fff;
+    border:none;
+    padding:15px 40px;
+    border-radius:50px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.3s;
 }
 
-/* Botão voltar ao topo */
-#topButton {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    background: #2e7d32;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-    box-shadow: 0 8px 20px rgba(0,0,0,.25);
-    transition: .3s;
-    z-index: 999;
+button:hover{
+    background:#43a047;
+    transform:translateY(-3px);
 }
 
-#topButton:hover {
-    background: #43a047;
-    transform: scale(1.1);
+.frase{
+    font-size:1.2rem;
+    color:#2e7d32;
+    font-weight:600;
+    margin-top:20px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#1b5e20;
+    color:#fff;
+    text-align:center;
+    padding:30px;
+    margin-top:80px;
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+    transition:.8s ease;
+}
+
+/* ===========================
+   BOTÃO TOPO
+=========================== */
+
+#topButton{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#2e7d32;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    display:none;
+    font-size:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+    transition:.3s;
+    z-index:999;
+}
+
+#topButton:hover{
+    background:#43a047;
+    transform:scale(1.1);
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#edf7ed;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#43a047;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#2e7d32;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+.hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding-top:150px;
+}
+
+.hero h2{
+    font-size:2.5rem;
+}
+
+.destaque{
+    grid-template-columns:1fr;
+}
+
+.lista{
+    grid-template-columns:1fr;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:20px;
+}
+
+.menu{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.section{
+    width:92%;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.hero-image{
+    order:-1;
+}
+
+.hero-image img{
+    max-width:700px;
+    margin:auto;
+    display:block;
+}
+
 }
 
 
-}
 
 
 
