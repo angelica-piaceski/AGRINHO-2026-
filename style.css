@@ -135,6 +135,38 @@ textarea {
     section {
         padding: 60px 6%;
     }
+
+/* Link ativo do menu */
+nav ul li a.active {
+    color: #81c784;
+    border-bottom: 2px solid #81c784;
+}
+
+/* Botão voltar ao topo */
+#topButton {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #2e7d32;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    transition: .3s;
+    z-index: 999;
+}
+
+#topButton:hover {
+    background: #43a047;
+    transform: scale(1.1);
+}
+
+
 }
 
 
