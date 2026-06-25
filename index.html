@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -8,7 +7,14 @@
 
     <title>Agro Forte, Futuro Sustentável</title>
 
-    <meta name="description" content="Agrinho 2026 - Tecnologia e sustentabilidade no agronegócio">
+    <meta name="description"
+        content="Projeto Agrinho 2026 - Tecnologia, inovação e sustentabilidade no agronegócio brasileiro.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,10 +22,12 @@
 <body>
 
 <header>
-    <nav>
-        <h1>🌱 Agro Futuro</h1>
 
-        <ul>
+    <nav class="navbar">
+
+        <h1 class="logo">🌱 Agro Futuro</h1>
+
+        <ul class="menu">
             <li><a href="#inicio">Início</a></li>
             <li><a href="#producao">Produção</a></li>
             <li><a href="#sustentabilidade">Sustentabilidade</a></li>
@@ -27,117 +35,252 @@
             <li><a href="#solucoes">Soluções</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
+
     </nav>
+
 </header>
 
 <main>
 
-<section id="inicio">
-    <div class="hero">
-        <h2>Produzir hoje, preservar o amanhã</h2>
-        <p>O agronegócio moderno une tecnologia e sustentabilidade para alimentar o mundo sem destruir o planeta.</p>
+<section id="inicio" class="hero">
 
-        <a class="btn" href="#producao">Explorar</a>
+    <div class="hero-text">
 
-        <img src="assets/images/agro-tecnologia.png"
-             alt="Plantação moderna com drones e tecnologia"
-             class="hero-img">
+        <span class="tag">
+            Projeto Agrinho 2026
+        </span>
+
+        <h2>
+            Agro Forte,
+            <span>Futuro Sustentável</span>
+        </h2>
+
+        <p>
+            O agronegócio moderno utiliza tecnologia, inovação e responsabilidade
+            ambiental para produzir alimentos de qualidade, preservar os recursos
+            naturais e construir um futuro melhor para as próximas gerações.
+        </p>
+
+        <a href="#producao" class="btn">
+            Explorar
+        </a>
+
     </div>
+
+    <div class="hero-image">
+
+        <img
+            src="assets/images/agro-tecnologia.png"
+            alt="Agricultura moderna com tecnologia">
+
+    </div>
+
 </section>
 
-<section id="producao" class="card">
-    <h2>Produção Agrícola</h2>
+<section id="producao" class="section">
 
-    <p>
-        A produção agrícola desempenha um papel essencial no desenvolvimento econômico e social,
-        sendo responsável pelo fornecimento de alimentos, matérias-primas e geração de empregos.
-        Por meio da utilização de tecnologias modernas, máquinas eficientes e práticas sustentáveis,
-        os produtores conseguem aumentar a produtividade, reduzir impactos ambientais e preservar
-        os recursos naturais. Dessa forma, a agricultura contribui para a segurança alimentar e
-        para o crescimento sustentável da sociedade.
+    <h2>🌾 Produção Agrícola</h2>
+
+    <p class="texto">
+
+        A produção agrícola é fundamental para o desenvolvimento econômico e social,
+        garantindo alimentos, matérias-primas e oportunidades de trabalho.
+        Com tecnologias modernas, máquinas inteligentes e boas práticas agrícolas,
+        é possível aumentar a produtividade e reduzir os impactos ambientais.
+
     </p>
 
-    <div class="grid">
-        <div class="box">🌾 Geração de empregos</div>
-        <div class="box">🚜 Alta produtividade</div>
-        <div class="box">🌍 Exportação global</div>
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🚜 Tecnologia</h3>
+
+            <p>
+                Máquinas modernas aumentam a eficiência e reduzem desperdícios.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🌾 Produção</h3>
+
+            <p>
+                O Brasil está entre os maiores produtores agrícolas do mundo.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🌍 Economia</h3>
+
+            <p>
+                O agronegócio movimenta a economia e gera milhões de empregos.
+            </p>
+
+        </div>
+
     </div>
+
 </section>
 
-<section id="sustentabilidade" class="card">
-    <h2>Sustentabilidade</h2>
+<section id="sustentabilidade" class="section destaque">
 
-    <p>
-        A sustentabilidade é um conjunto de práticas que busca equilibrar o desenvolvimento
-        econômico, a preservação ambiental e o bem-estar social. Por meio do uso consciente
-        dos recursos naturais, da redução de desperdícios e da adoção de hábitos responsáveis,
-        é possível atender às necessidades atuais sem comprometer as futuras gerações.
-        Dessa forma, a sustentabilidade contribui para a conservação do planeta e para uma
-        melhor qualidade de vida para todos.
-    </p>
+    <div class="imagem">
 
-    <img src="assets/images/sustentabilidade-agro.png"
-         alt="Agricultura sustentável com energia limpa e preservação ambiental"
-         class="secao-img">
+        <img
+            src="assets/images/sustentabilidade-agro.png"
+            alt="Agricultura sustentável">
 
-    <div class="grid">
-        <div class="box">💧 Irrigação inteligente</div>
-        <div class="box">☀️ Energia solar</div>
-        <div class="box">🌱 Conservação do solo</div>
     </div>
-</section>
 
-<section id="desafios" class="card">
-    <h2>Desafios Ambientais</h2>
+    <div class="conteudo">
 
-    <ul>
-        <li>Desmatamento</li>
-        <li>Uso excessivo da água</li>
-        <li>Emissão de carbono</li>
-        <li>Mudanças Climáticas</li>
-        <li>Perda da Biodiversidade</li>
-        <li>Produção Excessiva de Resíduos</li>
-        <li>Escassez de Água</li>
-        <li>Degradação do Solo</li>
-        <li>Queimadas e Incêndios Florestais</li>
-        <li>Uso Excessivo de Recursos Naturais</li>
-    </ul>
-</section>
+        <h2>🌱 Sustentabilidade</h2>
 
-<section id="solucoes" class="card">
-    <h2>Soluções</h2>
+        <p>
 
-    <p>Tecnologia e inovação são essenciais para o futuro do campo.</p>
+            Sustentabilidade significa produzir de forma consciente,
+            preservando o solo, a água, a biodiversidade e garantindo
+            qualidade de vida para as futuras gerações.
 
-    <div class="grid">
-        <div class="box">🚁 Drones agrícolas</div>
-        <div class="box">🌳 Reflorestamento</div>
-        <div class="box">⚡ Energia limpa</div>
-        <div class="box">♻️ Consciência Ambiental</div>
+        </p>
+
+        <div class="lista">
+
+            <span>💧 Irrigação Inteligente</span>
+
+            <span>☀️ Energia Solar</span>
+
+            <span>🌳 Reflorestamento</span>
+
+            <span>♻️ Agricultura Sustentável</span>
+
+        </div>
+
     </div>
+
 </section>
 
-<section id="contato" class="card">
-    <h2>Contato</h2>
+<section id="desafios" class="section">
+
+    <h2>🌎 Desafios Ambientais</h2>
+
+    <div class="cards">
+
+        <div class="card">🌲 Desmatamento</div>
+
+        <div class="card">🔥 Queimadas</div>
+
+        <div class="card">💧 Escassez de Água</div>
+
+        <div class="card">🌍 Mudanças Climáticas</div>
+
+        <div class="card">🌱 Degradação do Solo</div>
+
+        <div class="card">🦜 Perda da Biodiversidade</div>
+
+    </div>
+
+</section>
+
+<section id="solucoes" class="section">
+
+    <h2>💡 Soluções</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🚁 Drones</h3>
+
+            <p>Monitoramento das lavouras com alta precisão.</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🌞 Energia Limpa</h3>
+
+            <p>Uso de fontes renováveis para reduzir impactos.</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🌳 Reflorestamento</h3>
+
+            <p>Recuperação de áreas degradadas e proteção ambiental.</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🤝 Consciência</h3>
+
+            <p>Educação ambiental para um futuro sustentável.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contato" class="section contato">
+
+    <h2>📩 Entre em Contato</h2>
 
     <form>
-        <input type="text" placeholder="Nome" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Mensagem" required></textarea>
-        <button type="submit">Enviar</button>
+
+        <input
+            type="text"
+            placeholder="Seu nome"
+            required>
+
+        <input
+            type="email"
+            placeholder="Seu e-mail"
+            required>
+
+        <textarea
+            placeholder="Escreva sua mensagem..."
+            required></textarea>
+
+        <button type="submit">
+
+            Enviar Mensagem
+
+        </button>
+
     </form>
 
-    <p class="frase">"O futuro depende das escolhas de hoje."</p>
+    <p class="frase">
+
+        "O futuro depende das escolhas que fazemos hoje."
+
+    </p>
+
 </section>
 
 </main>
 
 <footer>
-    <p>© 2026 Agro Futuro - Projeto Agrinho</p>
+
+    <p>
+
+        © 2026 Agro Futuro • Projeto Agrinho
+
+    </p>
+
 </footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
+
+
 
