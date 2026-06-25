@@ -429,6 +429,16 @@ footer{
     display:block;
 }
 
+   /* ===========================
+   MENU ATIVO
+=========================== */
+
+.menu a.active{
+    color:#c8e6c9;
+    border-bottom:2px solid #c8e6c9;
+    padding-bottom:4px;
+}
+
 }
 
 
