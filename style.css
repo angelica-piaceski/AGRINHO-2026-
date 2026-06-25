@@ -429,7 +429,9 @@ footer{
     display:block;
 }
 
-   /* ===========================
+}   /* ← FECHA O @MEDIA AQUI */
+
+/* ===========================
    MENU ATIVO
 =========================== */
 
@@ -438,9 +440,6 @@ footer{
     border-bottom:2px solid #c8e6c9;
     padding-bottom:4px;
 }
-
-}
-
 
 
 
