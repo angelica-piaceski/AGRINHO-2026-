@@ -1,38 +1,126 @@
+```javascript
+// ===============================
+// ANIMAÇÃO AO ROLAR A PÁGINA
+// ===============================
 
-// ANIMAÇÃO AO SCROLL
-const elements = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".card");
+const imagens = document.querySelectorAll(".hero-img, .secao-img");
 
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
             entry.target.classList.remove("hidden");
         }
+
     });
-}, { threshold: 0.15 });
-
-elements.forEach(el => {
-    el.classList.add("hidden");
-    observer.observe(el);
+}, {
+    threshold: 0.15
 });
 
-// FORM
-document.querySelector("form").addEventListener("submit", e => {
+cards.forEach(card => {
+    card.classList.add("hidden");
+    observer.observe(card);
+});
+
+imagens.forEach(img => {
+    img.classList.add("hidden");
+    observer.observe(img);
+});
+
+// ===============================
+// FORMULÁRIO
+// ===============================
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function (e) {
+
     e.preventDefault();
-    alert("🌱 Mensagem enviada com sucesso!");
+
+    alert("🌱 Obrigado pelo contato!\n\nSua mensagem foi enviada com sucesso.");
+
+    form.reset();
+
 });
 
-// BOTÃO TO TOP
-const btn = document.createElement("button");
-btn.id = "topButton";
-btn.innerHTML = "⬆";
-document.body.appendChild(btn);
+// ===============================
+// BOTÃO VOLTAR AO TOPO
+// ===============================
+
+const topButton = document.createElement("button");
+
+topButton.id = "topButton";
+topButton.innerHTML = "⬆";
+
+document.body.appendChild(topButton);
 
 window.addEventListener("scroll", () => {
-    btn.style.display = window.scrollY > 300 ? "block" : "none";
+
+    if (window.scrollY > 350) {
+
+        topButton.style.display = "block";
+
+    } else {
+
+        topButton.style.display = "none";
+
+    }
+
 });
 
-btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+topButton.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+// ===============================
+// MENU ATIVO
+// ===============================
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+
+    });
+
+});
+
+// ===============================
+// ANO AUTOMÁTICO NO FOOTER
+// ===============================
+
+const footer = document.querySelector("footer p");
+
+footer.innerHTML = `© ${new Date().getFullYear()} Agro Futuro - Projeto Agrinho`;
+```
+
 
 
 
