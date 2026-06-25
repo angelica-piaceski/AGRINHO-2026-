@@ -1,1 +1,10 @@
-
+AGRINHO-2026
+│
+├── index.html
+├── style.css
+├── script.js
+│
+└── assets
+    └── images
+        ├── agro-tecnologia.png
+        └── sustentabilidade-agro.png
